@@ -1,33 +1,44 @@
+@import 'normalize.css';
+@import 'header.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 html {
   font-size: 16px;
   scrollbar-gutter: stable;
 }
 
-.wrapper {
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(255, 103, 31);
+  border-radius: 2px;
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  overflow: hidden;
 }
-.header {
-  align-items: center;
-  display: flex;
-  height: 60px;
-  background: #000;
-  border-style: solid;
-  border-width: 4px;
-  border-color: rgb(255, 103, 31);
-  border-top-width: 0;
-  border-right-width: 0;
-  border-left-width: 0;
-  margin-bottom: 50px;
-}
+
 .container {
   max-width: 1440px;
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .main {
   display: flex;
@@ -44,24 +55,18 @@ html {
   border-bottom-width: 0;
   border-left-width: 0;
 }
-.header__content {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  column-gap: 10px;
+
+.section {
+  margin-bottom: 50px;
 }
+
+
 .link-reset {
   cursor: pointer;
   text-decoration: none;
 }
-.header__logo_link {
-  display: block;
-  border-color: rgb(255, 103, 31);
-  border-top-width: 0;
-  position: relative;
-  z-index: 2;
-}
-.reset {
+
+/* .reset {
   list-style: none;
   padding-bottom: 0;
   padding-left: 0;
@@ -71,26 +76,8 @@ html {
   margin-right: 0;
   margin-top: 0;
   margin-bottom: 0;
-}
-.header__menu_list {
-  align-items: center;
-  display: flex;
-  column-gap: 30px;
-}
-.header__menu_link {
-  text-transform: uppercase;
-  transition: 0.3s all ease;
-  align-items: center;
-  display: flex;
-  height: 60px;
-  font-size: 16px;
-  font-weight: 600;
-  color: rgb(255, 255, 255);
-}
-.header__menu_link:hover {
-  color: rgb(255, 103, 31);
-  transition: 0.3s all ease;
-}
+} */
+
 .image-block {
   display: block;
   width: 100%;
@@ -126,9 +113,7 @@ html {
 .text-left {
   text-align: left;
 }
-.header__logo_img {
-  height: 56px;
-}
+
 .trending__section {
   margin-bottom: 50px;
 }
@@ -319,7 +304,7 @@ html {
   position: relative;
 }
 .link__btn {
-  background: #ff671f ;
+  background: #ff671f;
   border-radius: 30px;
   font-weight: 600;
   color: rgb(255, 255, 255);
@@ -467,7 +452,7 @@ html {
 .team__logo_block {
   overflow: hidden;
   text-align: center;
-  background: #ff671f ;
+  background: #ff671f;
   display: block;
   padding-bottom: 10px;
   padding-top: 10px;
@@ -807,12 +792,12 @@ html {
   transition: 0.3s all ease;
 }
 .pag__item:hover {
-  background: #ff671f ;
+  background: #ff671f;
   border-color: rgb(255, 255, 255);
   transition: 0.3s all ease;
 }
 .pag-item__active {
-  background: #ff671f ;
+  background: #ff671f;
   color: rgb(255, 255, 255);
 }
 .videos__section {
@@ -968,7 +953,7 @@ html {
   transition: 0.3s all ease;
 }
 .bg-orange {
-  background: #ff671f ;
+  background: #ff671f;
 }
 .calendar__time {
   font-size: 20px;
@@ -992,7 +977,7 @@ html {
   border-color: rgb(0, 0, 0);
 }
 .calendar__link_btn:hover {
-  background: #ff671f ;
+  background: #ff671f;
   color: rgb(0, 0, 0);
   transition: 0.3s all ease;
 }
@@ -1137,7 +1122,7 @@ html {
 .player__img_block {
   padding-bottom: 100%;
   overflow: hidden;
-  background: #ff671f ;
+  background: #ff671f;
   color: rgb(0, 0, 0);
   transition: 0.3s all ease;
 }
@@ -1235,7 +1220,7 @@ html {
   text-align: right;
 }
 .play-item__right {
-  background: #ff671f ;
+  background: #ff671f;
   font-size: 18px;
   font-weight: 700;
   color: rgb(0, 0, 0);
@@ -1292,4 +1277,22 @@ html {
 .video-post__rows {
   column-gap: 30px;
   margin-bottom: 25px;
+}
+
+@media (max-width: 767.98px) {
+  body.lock {
+    overflow: hidden;
+  }
+
+  .section {
+    margin-bottom: 30px;
+  }
+
+  .title-block {
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
 }
