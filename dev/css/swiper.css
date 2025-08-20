@@ -52,7 +52,7 @@
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
-  background-color: rgb(8, 95, 255);
+  background-color:rgb(255, 103, 31);
   opacity: 0.4;
   border-radius: 50%;
   transition: 0.3s opacity;
@@ -99,7 +99,7 @@
 }
 
 .swiper__pagination span.swiper-pagination-bullet-active {
-  background-color: rgb(8, 95, 255);
+  background-color: rgb(255, 103, 31)
 }
 
 @media (max-width: 1099.98px) {
